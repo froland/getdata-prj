@@ -1,10 +1,114 @@
-The values from this data set are computed from the Human Activity Recognition Using Smartphones Dataset Version 1.0 which description can be read in the "UCI HAR Dataset_info.txt" file.
+Feature Selection 
+=================
 
-Columns description
--------------------
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
- * activity: one of the 6 labels from {WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS,SITTING,STANDING,LAYING} that describes the activity.
- * subject: an integer between 1 and 30 that describes the volunteers.
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
-The other 66 columns contain numeric values bounded within [-1,1]. Each one is the mean of the corresponding vector feature in the original data set for a specific activity and a specific subject.
- 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+Two variables are added to the set:
+ * "activity" is a label describing the activity performed during the measurement. It can take one of the following 6 values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+ * "subject" identifies the volunteer 
+
+Summaries
+=========
+
+Each variable is averaged by activity and subject.
+
+The complete list of variables is:
+
+ * activity
+ * subject
+ * tBodyAcc-mean()-X
+ * tBodyAcc-mean()-Y
+ * tBodyAcc-mean()-Z
+ * tBodyAcc-std()-X
+ * tBodyAcc-std()-Y
+ * tBodyAcc-std()-Z
+ * tGravityAcc-mean()-X
+ * tGravityAcc-mean()-Y
+ * tGravityAcc-mean()-Z
+ * tGravityAcc-std()-X
+ * tGravityAcc-std()-Y
+ * tGravityAcc-std()-Z
+ * tBodyAccJerk-mean()-X
+ * tBodyAccJerk-mean()-Y
+ * tBodyAccJerk-mean()-Z
+ * tBodyAccJerk-std()-X
+ * tBodyAccJerk-std()-Y
+ * tBodyAccJerk-std()-Z
+ * tBodyGyro-mean()-X
+ * tBodyGyro-mean()-Y
+ * tBodyGyro-mean()-Z
+ * tBodyGyro-std()-X
+ * tBodyGyro-std()-Y
+ * tBodyGyro-std()-Z
+ * tBodyGyroJerk-mean()-X
+ * tBodyGyroJerk-mean()-Y
+ * tBodyGyroJerk-mean()-Z
+ * tBodyGyroJerk-std()-X
+ * tBodyGyroJerk-std()-Y
+ * tBodyGyroJerk-std()-Z
+ * tBodyAccMag-mean()
+ * tBodyAccMag-std()
+ * tGravityAccMag-mean()
+ * tGravityAccMag-std()
+ * tBodyAccJerkMag-mean()
+ * tBodyAccJerkMag-std()
+ * tBodyGyroMag-mean()
+ * tBodyGyroMag-std()
+ * tBodyGyroJerkMag-mean()
+ * tBodyGyroJerkMag-std()
+ * fBodyAcc-mean()-X
+ * fBodyAcc-mean()-Y
+ * fBodyAcc-mean()-Z
+ * fBodyAcc-std()-X
+ * fBodyAcc-std()-Y
+ * fBodyAcc-std()-Z
+ * fBodyAccJerk-mean()-X
+ * fBodyAccJerk-mean()-Y
+ * fBodyAccJerk-mean()-Z
+ * fBodyAccJerk-std()-X
+ * fBodyAccJerk-std()-Y
+ * fBodyAccJerk-std()-Z
+ * fBodyGyro-mean()-X
+ * fBodyGyro-mean()-Y
+ * fBodyGyro-mean()-Z
+ * fBodyGyro-std()-X
+ * fBodyGyro-std()-Y
+ * fBodyGyro-std()-Z
+ * fBodyAccMag-mean()
+ * fBodyAccMag-std()
+ * fBodyBodyAccJerkMag-mean()
+ * fBodyBodyAccJerkMag-std()
+ * fBodyBodyGyroMag-mean()
+ * fBodyBodyGyroMag-std()
+ * fBodyBodyGyroJerkMag-mean()
+ * fBodyBodyGyroJerkMag-std()

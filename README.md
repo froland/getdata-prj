@@ -16,8 +16,6 @@ In this repository, you will find the following files:
  * run_analysis.R: This script analyses the raw data and create a new file
    "feature_means.txt" which contains the analysis results.
  * getdata-projectfiles-UCI HAR Dataset.zip: the [raw data file][1].
- * UCI HAR Dataset_info.txt: explanation of the raw data from
-   getdata-projectfiles-UCI HAR Dataset.zip
  * features_means.txt: the result of running the analyse_data.R script on the
    data obtained with the get_data.R script. This is the wide form as mentioned
    in the rubric as either long or wide form is acceptable, see 
