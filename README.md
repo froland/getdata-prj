@@ -31,7 +31,7 @@ You can read the feature_means.txt file with the following R snippet.
 
 ```{r}
 data_filename <- "feature_means.txt"
-data <- read.table(data_filename, header = TRUE)
+data <- read.table(data_filename, header = TRUE, check.names = FALSE)
 View(data)
 ```
 
