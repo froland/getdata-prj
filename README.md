@@ -13,7 +13,7 @@ In this repository, you will find the following files:
 
  * get_data.R: Downloads the project data. After running this, you'll find the
    zip file "getdata-projectfiles-UCI HAR Dataset.zip" in the current folder.
- * analyse_data.R: This script analyses the raw data and create a new file
+ * run_analysis.R: This script analyses the raw data and create a new file
    "feature_means.txt" which contains the analysis results.
  * getdata-projectfiles-UCI HAR Dataset.zip: the [raw data file][1].
  * UCI HAR Dataset_info.txt: explanation of the raw data from
