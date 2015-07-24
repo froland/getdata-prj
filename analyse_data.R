@@ -112,5 +112,5 @@ summarise_set <- function(to_summarise) {
 full_set <- concatenate_sets(features, activities)
 # Compute the means by activity, by subject
 summary_set <- summarise_set(full_set)
-# Write the result in a flat file called "summary.txt"
-write.table(summary_set, file = "summary.txt", row.names = FALSE)
+# Write the result in a flat file called "feature_means.txt"
+write.table(summary_set, file = "feature_means.txt", row.names = FALSE)
